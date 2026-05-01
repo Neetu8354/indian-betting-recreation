@@ -10,8 +10,8 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 
 const Contact = () => {
   useSeo({
-    title: "Contact Us – Khelo24Login.live | 24x7 Support",
-    description: "Get 24x7 support for login, deposits, withdrawals and games on Khelo24Login.live.",
+    title: "Contact Us – Khelo24Admin.live | 24x7 Support",
+    description: "Get 24x7 support for login, deposits, withdrawals and games on Khelo24Admin.live.",
     canonical: "/contact",
     keywords: "khelo24login contact, 24x7 support, betting support, customer service",
   });
@@ -22,7 +22,7 @@ const Contact = () => {
       <BreadcrumbNav items={[{ label: "Home", href: "/" }, { label: "Contact Us" }]} />
       <section className="container py-12 md:py-20">
         <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-          Contact <span className="text-gradient-gold">Khelo24Login.live</span>
+          Contact <span className="text-gradient-gold">Khelo24Admin.live</span>
         </h1>
         <p className="text-muted-foreground max-w-2xl mb-10">We're here to help — reach out anytime for login issues, deposits, withdrawals or game queries.</p>
 
@@ -61,7 +61,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <RelatedLinks links={[{ to: "/about", label: "About Khelo24Login.live" }, { to: "/blog/how-to-login-khelo24login", label: "How to Login — Step by Step" }, { to: "/cricket", label: "Live Cricket Betting" }, { to: "/aviator", label: "Play Aviator Game" }]} />
+      <RelatedLinks links={[{ to: "/about", label: "About Khelo24Admin.live" }, { to: "/blog/how-to-login-khelo24login", label: "How to Login — Step by Step" }, { to: "/cricket", label: "Live Cricket Betting" }, { to: "/aviator", label: "Play Aviator Game" }]} />
       <Footer />
       <FloatingWhatsApp />
     </main>

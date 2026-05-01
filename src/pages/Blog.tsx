@@ -9,7 +9,7 @@ import blogImg from "@/assets/card-fantasy.jpg";
 
 const Blog = () => {
   useSeo({
-    title: "How to Login Khelo24Login Step by Step Guide 2026",
+    title: "How to Login Khelo24Admin Step by Step Guide 2026",
     description: "Complete step by step guide on how to login khelo24login with username.",
     canonical: "/blog/how-to-login-khelo24login",
     keywords: "khelo24login login, how to login khelo24login, khelo24login guide",
@@ -19,10 +19,10 @@ const Blog = () => {
     <main>
       <Header />
       <BreadcrumbNav items={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: "How to Login" }]} />
-      <BlogPostingSchema title="How to Login Khelo24Login Step by Step Guide 2026" description="Complete step by step guide on how to login khelo24login with username." slug="/blog/how-to-login-khelo24login" />
+      <BlogPostingSchema title="How to Login Khelo24Admin Step by Step Guide 2026" description="Complete step by step guide on how to login khelo24login with username." slug="/blog/how-to-login-khelo24login" />
       <article className="container py-12 md:py-20 max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-6">
-          How to Login Khelo24Login <span className="text-gradient-gold">Step by Step Guide 2026</span>
+          How to Login Khelo24Admin <span className="text-gradient-gold">Step by Step Guide 2026</span>
         </h1>
 
         <section className="mb-10">
@@ -39,7 +39,7 @@ const Blog = () => {
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm">1</span>
               <div>
                 <h3 className="font-bold mb-1">Visit the website and enter your credentials</h3>
-                <p className="text-sm text-muted-foreground">Go to Khelo24Login.live and enter your username and password in the login form.</p>
+                <p className="text-sm text-muted-foreground">Go to Khelo24Admin.live and enter your username and password in the login form.</p>
               </div>
             </div>
             <div className="flex gap-4 p-4 rounded-xl bg-card/50 border border-border">
@@ -52,10 +52,10 @@ const Blog = () => {
           </div>
         </section>
 
-        <img src={blogImg} alt="how to login khelo24login step by step guide khelo24login.live" className="rounded-xl border border-border w-full aspect-video object-cover mt-8" loading="lazy" />
+        <img src={blogImg} alt="how to login khelo24login step by step guide khelo24admin.live" className="rounded-xl border border-border w-full aspect-video object-cover mt-8" loading="lazy" />
       </article>
 
-      <RelatedLinks links={[{ to: "/blog/how-to-use-khelo24login-online", label: "How to Use Khelo24Login Online" }, { to: "/blog/how-to-join-online-sports-gaming-website", label: "How to Join & Get Free ID" }, { to: "/cricket", label: "Live Cricket Betting" }, { to: "/about", label: "About Khelo24Login.live" }]} />
+      <RelatedLinks links={[{ to: "/blog/how-to-use-khelo24login-online", label: "How to Use Khelo24Admin Online" }, { to: "/blog/how-to-join-online-sports-gaming-website", label: "How to Join & Get Free ID" }, { to: "/cricket", label: "Live Cricket Betting" }, { to: "/about", label: "About Khelo24Admin.live" }]} />
       <Footer />
       <FloatingWhatsApp />
     </main>
