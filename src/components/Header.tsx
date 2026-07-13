@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { openWA } from "@/lib/wa";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -44,11 +43,11 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button onClick={openWA} variant="outline" size="sm" className="hidden sm:flex">
-            Login
+          <Button asChild variant="outline" size="sm" className="hidden sm:flex">
+            <Link to="/contact">Login</Link>
           </Button>
-          <Button onClick={openWA} size="sm" className="bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold font-bold">
-            <MessageCircle className="h-4 w-4 mr-1" /> Join
+          <Button asChild size="sm" className="bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold font-bold">
+            <Link to="/contact"><MessageCircle className="h-4 w-4 mr-1" /> Join</Link>
           </Button>
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2" aria-label="Menu">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

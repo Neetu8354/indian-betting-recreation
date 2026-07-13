@@ -1,4 +1,3 @@
-import { openWA } from "@/lib/wa";
 import { Trophy } from "lucide-react";
 
 const TICKER = [
@@ -24,13 +23,13 @@ export const WinnersTicker = () => {
         <div className="relative flex-1 overflow-hidden">
           <div className="flex gap-6 animate-marquee whitespace-nowrap">
             {items.map((t, i) => (
-              <button key={i} onClick={openWA} className="flex items-center gap-2 text-sm hover:text-primary transition-smooth">
+              <div key={i} className="flex items-center gap-2 text-sm">
                 <span className="text-muted-foreground">{t.user}</span>
                 <span className="text-foreground/60">won at</span>
                 <span className="font-semibold text-foreground">{t.game}</span>
                 <span className="font-black text-gold">{t.amt}</span>
                 <span className="text-muted-foreground/40">•</span>
-              </button>
+              </div>
             ))}
           </div>
         </div>

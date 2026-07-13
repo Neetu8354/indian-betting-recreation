@@ -1,5 +1,4 @@
-import { openWA } from "@/lib/wa";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { MessageCircle, Zap, CreditCard, Smartphone, Headphones } from "lucide-react";
 
 const REASONS = [
@@ -25,13 +24,13 @@ export const TrustSection = () => (
     </h2>
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {REASONS.map((r) => (
-        <button key={r.title} onClick={openWA} className="p-5 rounded-xl bg-card/50 border border-border hover:border-primary/50 transition-all text-left group">
+        <Link key={r.title} to="/contact" className="p-5 rounded-xl bg-card/50 border border-border hover:border-primary/50 transition-all text-left group block">
           <div className="h-11 w-11 rounded-lg bg-primary/15 border border-primary/30 flex items-center justify-center mb-3 group-hover:bg-primary/25 transition-all">
             <r.icon className="h-5 w-5 text-primary" />
           </div>
           <h3 className="font-bold mb-1 text-sm">{r.title}</h3>
           <p className="text-xs text-muted-foreground">{r.desc}</p>
-        </button>
+        </Link>
       ))}
     </div>
 

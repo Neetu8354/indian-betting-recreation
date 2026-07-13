@@ -1,4 +1,4 @@
-import { openWA } from "@/lib/wa";
+import { Link } from "react-router-dom";
 import { Smartphone, IndianRupee, Building2, CreditCard, Wallet } from "lucide-react";
 
 const METHODS = [
@@ -19,13 +19,13 @@ export const PaymentBar = () => (
         </div>
         <div className="flex flex-wrap gap-2">
           {METHODS.map((m) => (
-            <button key={m.label} onClick={openWA} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background border border-border hover:border-primary/50 transition-smooth">
+            <Link key={m.label} to="/contact" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background border border-border hover:border-primary/50 transition-smooth">
               <m.icon className="h-4 w-4 text-primary" />
               <div className="text-left">
                 <div className="text-xs font-bold leading-none">{m.label}</div>
                 <div className="text-[10px] text-muted-foreground">{m.sub}</div>
               </div>
-            </button>
+            </Link>
           ))}
         </div>
       </div>

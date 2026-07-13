@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { openWA } from "@/lib/wa";
 import { ChevronLeft, ChevronRight, ChevronRight as ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-cricket.jpg";
@@ -53,8 +54,8 @@ export const HeroSlider = () => {
               <Button onClick={openWA} size="lg" className="w-full bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold font-black text-base sm:text-lg rounded-2xl h-12">
                 Play Now <ArrowRight className="h-5 w-5 ml-1" />
               </Button>
-              <Button onClick={openWA} size="lg" variant="outline" className="w-full bg-background border-2 border-gold text-gold hover:bg-gold/10 font-black text-base sm:text-lg rounded-2xl h-12">
-                Join &amp; Win Big
+              <Button asChild size="lg" variant="outline" className="w-full bg-background border-2 border-gold text-gold hover:bg-gold/10 font-black text-base sm:text-lg rounded-2xl h-12">
+                <Link to="/contact">Join &amp; Win Big</Link>
               </Button>
             </div>
           </div>

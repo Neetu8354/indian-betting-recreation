@@ -1,36 +1,35 @@
-import { openWA } from "@/lib/wa";
 import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-type FooterLink = { label: string; to?: string; wa?: boolean };
+type FooterLink = { label: string; to?: string };
 
 const COLS: { title: string; links: FooterLink[] }[] = [
   { title: "Games", links: [
     { label: "Live Cricket Betting", to: "/cricket" },
     { label: "Aviator", to: "/aviator" },
     { label: "Teen Patti", to: "/teen-patti" },
-    { label: "Andar Bahar", wa: true },
-    { label: "Roulette", wa: true },
+    { label: "Andar Bahar", to: "/aviator" },
+    { label: "Roulette", to: "/aviator" },
   ]},
   { title: "Company", links: [
     { label: "About Us", to: "/about" },
     { label: "Blog", to: "/blog" },
     { label: "Contact Us", to: "/contact" },
-    { label: "Responsible Gaming", wa: true },
-    { label: "Terms", wa: true },
+    { label: "Responsible Gaming", to: "/about" },
+    { label: "Terms", to: "/contact" },
   ]},
   { title: "Account", links: [
-    { label: "Get Free ID", wa: true },
-    { label: "Deposit", wa: true },
-    { label: "Withdraw", wa: true },
-    { label: "Bonuses", wa: true },
-    { label: "VIP Club", wa: true },
+    { label: "Get Free ID", to: "/contact" },
+    { label: "Deposit", to: "/contact" },
+    { label: "Withdraw", to: "/contact" },
+    { label: "Bonuses", to: "/contact" },
+    { label: "VIP Club", to: "/contact" },
   ]},
   { title: "Support", links: [
-    { label: "WhatsApp Chat", wa: true },
+    { label: "WhatsApp Chat", to: "/contact" },
     { label: "24x7 Help", to: "/contact" },
     { label: "Login Guide", to: "/blog" },
-    { label: "Privacy Policy", wa: true },
+    { label: "Privacy Policy", to: "/contact" },
   ]},
 ];
 
@@ -47,9 +46,9 @@ export const Footer = () => (
           </span>
         </Link>
         <p className="text-sm text-muted-foreground mb-4">India's most trusted online sports gaming platform. WhatsApp-first, INR-only, instant payouts.</p>
-        <button onClick={openWA} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-accent-foreground font-bold text-sm hover:opacity-90">
+        <Link to="/contact" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-accent-foreground font-bold text-sm hover:opacity-90">
           <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-        </button>
+        </Link>
       </div>
       {COLS.map((c) => (
         <div key={c.title}>
@@ -57,11 +56,7 @@ export const Footer = () => (
           <ul className="space-y-2">
             {c.links.map((l) => (
               <li key={l.label}>
-                {l.to ? (
-                  <Link to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-smooth">{l.label}</Link>
-                ) : (
-                  <button onClick={openWA} className="text-sm text-muted-foreground hover:text-primary transition-smooth">{l.label}</button>
-                )}
+                <Link to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-smooth">{l.label}</Link>
               </li>
             ))}
           </ul>

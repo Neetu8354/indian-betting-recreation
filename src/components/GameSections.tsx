@@ -1,4 +1,4 @@
-import { openWA } from "@/lib/wa";
+import { Link } from "react-router-dom";
 import { Play, Flame } from "lucide-react";
 import cardFantasy from "@/assets/card-fantasy.jpg";
 import cardAndar from "@/assets/card-andarbahar.jpg";
@@ -26,8 +26,8 @@ const CASINO: Game[] = [
   { img: cardRoulette, title: "Auto Roulette", tag: "24/7", alt: "play auto roulette on khelo24admin.live" },
 ];
 
-const Card = ({ g }: { g: Game }) => (
-  <button onClick={openWA} className="group relative overflow-hidden rounded-xl bg-gradient-card border border-border hover:border-primary/60 transition-smooth shadow-card hover:shadow-glow text-left">
+const Card = ({ g, to }: { g: Game; to: string }) => (
+  <Link to={to} className="group relative overflow-hidden rounded-xl bg-gradient-card border border-border hover:border-primary/60 transition-smooth shadow-card hover:shadow-glow text-left block">
     <div className="aspect-[4/3] overflow-hidden">
       <img src={g.img} alt={g.alt || g.title} loading="lazy" width={800} height={600} className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" />
     </div>
@@ -48,10 +48,10 @@ const Card = ({ g }: { g: Game }) => (
         <Play className="h-4 w-4 fill-current" />
       </div>
     </div>
-  </button>
+  </Link>
 );
 
-const Section = ({ title, sub, games }: { title: string; sub: string; games: Game[] }) => (
+const Section = ({ title, sub, games, gameRoutes }: { title: string; sub: string; games: Game[]; gameRoutes: string[] }) => (
   <section className="container py-10 md:py-14">
     <div className="flex items-end justify-between mb-6">
       <div>
@@ -62,17 +62,27 @@ const Section = ({ title, sub, games }: { title: string; sub: string; games: Gam
         </h2>
         <p className="text-sm text-muted-foreground mt-1">{sub}</p>
       </div>
-      <button onClick={openWA} className="hidden md:block text-sm font-semibold text-primary hover:underline">View all →</button>
+      <Link to="/cricket" className="hidden md:block text-sm font-semibold text-primary hover:underline">View all →</Link>
     </div>
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-      {games.map((g, i) => <Card key={i} g={g} />)}
+      {games.map((g, i) => <Card key={i} g={g} to={gameRoutes[i]} />)}
     </div>
   </section>
 );
 
 export const GameSections = () => (
   <>
-    <Section title="Cricket Hub" sub="IPL, T20, ODI — fantasy, predictions, live scores" games={CRICKET} />
-    <Section title="Live Casino" sub="Authentic Indian casino games with real dealers" games={CASINO} />
+    <Section 
+      title="Cricket Hub" 
+      sub="IPL, T20, ODI — fantasy, predictions, live scores" 
+      games={CRICKET}
+      gameRoutes={["/cricket", "/cricket", "/cricket", "/cricket"]}
+    />
+    <Section 
+      title="Live Casino" 
+      sub="Authentic Indian casino games with real dealers" 
+      games={CASINO}
+      gameRoutes={["/aviator", "/teen-patti", "/aviator", "/teen-patti", "/aviator", "/teen-patti"]}
+    />
   </>
 );
