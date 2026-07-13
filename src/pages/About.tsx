@@ -18,10 +18,10 @@ const FEATURES = [
 
 const About = () => {
   useSeo({
-    title: "About Us – Khelo24Admin.live | Trusted Online Sports Gaming Platform",
-    description: "Khelo24Admin.live is a safe and reliable online sports gaming platform in India with fast payouts and 24x7 support.",
+    title: "About Khelo24Admin | Online Cricket & Casino Platform India",
+    description: "Learn about Khelo24Admin, a trusted online gaming platform in India offering cricket betting, Aviator, Teen Patti and casino games with dedicated player support.",
     canonical: "/about",
-    keywords: "khelo24login about, online sports gaming platform india, safe betting platform",
+    keywords: "khelo24admin about, online cricket betting platform india, casino platform india, safe betting platform",
   });
 
   return (

@@ -11,10 +11,10 @@ import cardTeen from "@/assets/card-teenpatti.jpg";
 
 const TeenPatti = () => {
   useSeo({
-    title: "Play Teen Patti Online on Khelo24Admin.live",
-    description: "Enjoy Teen Patti online on Khelo24Admin.live - India's favourite card game.",
+    title: "Teen Patti Online Game in India | Khelo24Admin Official",
+    description: "Play the Teen Patti online game in India with Khelo24Admin. Enjoy smooth gameplay, quick access, mobile compatibility and 24/7 customer support. 18+ Only.",
     canonical: "/teen-patti",
-    keywords: "teen patti online, khelo24login teen patti, play teen patti, indian card game",
+    keywords: "teen patti online india, play teen patti, indian card game, khelo24admin teen patti",
   });
 
   return (

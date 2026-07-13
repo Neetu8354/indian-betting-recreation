@@ -10,10 +10,10 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 
 const Contact = () => {
   useSeo({
-    title: "Contact Us – Khelo24Admin.live | 24x7 Support",
-    description: "Get 24x7 support for login, deposits, withdrawals and games on Khelo24Admin.live.",
+    title: "Contact Khelo24Admin India | 24/7 Customer Support",
+    description: "Need help? Contact Khelo24Admin India for assistance with registration, account support and general enquiries. Our customer support team is available 24/7.",
     canonical: "/contact",
-    keywords: "khelo24login contact, 24x7 support, betting support, customer service",
+    keywords: "khelo24admin contact, 24/7 support india, betting support, customer service",
   });
 
   return (

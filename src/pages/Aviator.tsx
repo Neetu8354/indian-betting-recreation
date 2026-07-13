@@ -18,10 +18,10 @@ const STEPS = [
 
 const Aviator = () => {
   useSeo({
-    title: "Play Aviator on Khelo24Admin.live | Crash Game",
-    description: "Play Aviator crash game on Khelo24Admin.live and win big with smart cash outs.",
+    title: "Play Aviator Game Online in India | Khelo24Admin Official",
+    description: "Play the Aviator game online in India with Khelo24Admin. Enjoy fast gameplay, smooth mobile access, secure platform, instant support and an exciting gaming experience. 18+ Only.",
     canonical: "/aviator",
-    keywords: "aviator game online, crash game, khelo24login aviator, play aviator",
+    keywords: "aviator game online india, play aviator, crash game india, khelo24admin aviator",
   });
 
   return (
